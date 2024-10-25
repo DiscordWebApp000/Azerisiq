@@ -158,13 +158,13 @@ export default function AdminPanel() {
               <input
                 className="border border-gray-300 p-3 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
                 type="text"
-                placeholder="Başlık"
+                placeholder="Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
               <textarea
                 className="border border-gray-300 p-3 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Açıklama"
+                placeholder="Description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
@@ -172,7 +172,7 @@ export default function AdminPanel() {
                 className="px-6 py-3 bg-green-500 text-white font-semibold rounded-lg transition-colors duration-300 hover:bg-green-600"
                 onClick={editingQuestion ? updateQuestion : addQuestion}
               >
-                {editingQuestion ? "Güncelle" : "Soru Ekle"}
+                {editingQuestion ? "Update" : "Add Question"}
               </button>
             </div>
           )}

@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/navigation';
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AdminPanel() {
   const router = useRouter();
@@ -136,9 +137,9 @@ export default function AdminPanel() {
         <>
           <div className="w-full flex justify-between h-28 ">
             <h2 className="text-3xl font-semibold mt-2 text-gray-800">Admin Panel</h2>
-            <div>
-              <Image src='/images/azerisiq-logo2.png' width={90} height={10} alt='logo'></Image> 
-            </div>
+            <Link href="/">
+              <Image src='/images/azerisiq-logo2.png' width={90} height={10} alt='logo' />
+            </Link>
           </div>
 
           <button

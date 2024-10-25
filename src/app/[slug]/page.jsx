@@ -51,14 +51,14 @@ export default function QuestionDetails() {
         answers: [...(question.answers || []), { answer: answer, createdAt: new Date() }] // Append the new answer
       });
       setAnswer(''); // Clear the answer input after submission
-      alert('Your answer has been submitted successfully!'); // Notify user of success
+      alert('Cavabınız uğurla gönderildí!'); // Notify user of success
 
       // Redirect to the admin page after successful submission
       router.push('/'); // Change to your actual admin page path    
 
     } catch (error) {
       console.error('Error submitting answer:', error);
-      alert('There was an error submitting your answer.'); // Notify user of error
+      alert('Cavabınızı göndərərkən xəta baş verdi.'); // Notify user of error
     }
   };
 
@@ -88,7 +88,7 @@ export default function QuestionDetails() {
           <textarea
             value={answer}
             onChange={handleAnswerChange}
-            placeholder="Your answer..."
+            placeholder="Cavabınızı yazın..."
             className="w-full h-24 border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
@@ -96,7 +96,7 @@ export default function QuestionDetails() {
             type="submit"
             className="mt-4 w-full bg-blue-600 text-white rounded-lg px-4 py-2 hover:bg-blue-700 transition-colors duration-300"
           >
-            Submit Answer
+            Cavabınızı göndərin
           </button>
         </form>
       </div>

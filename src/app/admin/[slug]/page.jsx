@@ -95,7 +95,7 @@ export default function QuestionDetails() {
 
   return (
     <div className="p-6 bg-gray-50 min-h-screen rounded-lg shadow-lg">
-         <div className=' flex w-full h-[110px] justify-center items-center mb-8 ' >
+         <div className=' flex w-full h-[110px] justify-start items-center mb-8 ' >
           <Image src='/images/azerisiq-logo.png' alt="logo" width={200} height={200} />
         </div>  
       
@@ -143,9 +143,7 @@ export default function QuestionDetails() {
         {question.answers && question.answers.map((ans, index) => (
           <div key={index} className="border p-4 my-4 rounded-lg bg-white shadow-sm hover:shadow-md transition-all">
             <p className="text-gray-700">{ans.answer}</p>
-            <span className="text-gray-500 text-sm">
-              {new Date(ans.createdAt.seconds * 1000).toLocaleString()}
-            </span>
+           
           </div>
         ))}
       </div>

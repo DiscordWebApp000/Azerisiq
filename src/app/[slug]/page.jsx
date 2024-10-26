@@ -75,31 +75,47 @@ export default function QuestionDetails() {
   }
 
   return (
-    <div className="bg-white min-h-screen p-6"> {/* Full page background set to white */}
-      <div className=' flex w-full h-[150px] justify-center items-center ' >
-          <Image src='/images/azerisiq-logo.png' alt="logo" width={200} height={200} />
-        </div>  
-      <div className="max-w-2xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg mt-10"> {/* Form background set to light gray */}
-        <h1 className="text-2xl font-bold mb-4 text-black">{question.title}</h1>
-        <p className="text-gray-700 mb-6">{question.description}</p>
-       
-        {/* Answer submission form */}
-        <form onSubmit={handleSubmit} className="mt-4 text-black">
-          <textarea
-            value={answer}
-            onChange={handleAnswerChange}
-            placeholder="Cavabınızı yazın..."
-            className="w-full h-24 border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            required
-          />
-          <button
-            type="submit"
-            className="mt-4 w-full bg-blue-600 text-white rounded-lg px-4 py-2 hover:bg-blue-700 transition-colors duration-300"
-          >
-            Cavabınızı göndərin
-          </button>
-        </form>
+    <div className="bg-white min-h-screen relative"> {/* Full page background set to white */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-50"
+        style={{ backgroundImage: "url('/images/bg.png')", zIndex: 0 }}
+      ></div>
+  
+      <div className='flex flex-col w-full h-[100px] justify-center items-start mb-8 pl-8 p-4 relative z-10'>
+        <Image src='/images/azerisiq-logo.png' alt="logo" width={200} height={200} />
+        <h2 className="pt-2 text-xs font-semibold italic text-black">KOMANDA QURUCULUĞU və İNNOVATİV HƏLLƏR</h2>
+      </div> 
+  
+      <div className='w-full flex justify-center p-4 relative z-10'>
+        <div className="max-w-2xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg mt-10">
+          <h1 className="text-2xl font-bold mb-4 text-black">{question.title}</h1>
+          <p className="text-gray-700 mb-6">{question.description}</p>
+  
+          {/* Answer submission form */}
+          <form onSubmit={handleSubmit} className="mt-4 text-black">
+            <textarea
+              value={answer}
+              onChange={handleAnswerChange}
+              placeholder="Cavabınızı yazın..."
+              className="w-full h-24 border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+            <button
+              type="submit"
+              className="mt-4 w-full bg-blue-600 text-white rounded-lg px-4 py-2 hover:bg-blue-700 transition-colors duration-300"
+            >
+              Cavabınızı göndərin
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div className="h-[70px] w-full bottom-0 justify-center absolute z-10 text-black">
+        <h2 className="text-xs font-semibold italic w-full text-center">UĞUR, İNKİŞAF VƏ FƏRQLİLİYƏ GEDƏN</h2>
+        <h2 className="text-xs font-semibold italic w-full text-center">“İŞIQLI YOL”</h2>
+        <h2 className="text-xs font-semibold italic w-full text-center mt-2">Bakı 2024</h2>
       </div>
     </div>
   );
+  
 }

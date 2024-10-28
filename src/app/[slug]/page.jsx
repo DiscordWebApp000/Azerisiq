@@ -110,10 +110,9 @@ export default function QuestionDetails() {
         </div>
       </div>
       
-      <div className="h-[70px] w-full bottom-0 justify-center absolute z-10 text-black">
+      <div className="h-[50px] w-full bottom-0 justify-center absolute z-10 text-black">
         <h2 className="text-xs font-semibold italic w-full text-center">UĞUR, İNKİŞAF VƏ FƏRQLİLİYƏ GEDƏN</h2>
         <h2 className="text-xs font-semibold italic w-full text-center">“İŞIQLI YOL”</h2>
-        <h2 className="text-xs font-semibold italic w-full text-center mt-2">Bakı 2024</h2>
       </div>
     </div>
   );

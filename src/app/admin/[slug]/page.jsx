@@ -6,6 +6,7 @@ import { collection, getDocs, doc, updateDoc , deleteDoc } from 'firebase/firest
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function QuestionDetails() {
   const { slug } = useParams();
@@ -134,6 +135,10 @@ export default function QuestionDetails() {
               }`}
             ></div>
           </div>
+        </div>
+
+        <div>
+          <Link href={`/admin/${question.id}/presentation`} className=' ml-6 bg-blue-500 text-white p-3  rounded-md hover:bg-blue-600 transition-all'>Prezentasiya</Link>
         </div>
       </div>
 
